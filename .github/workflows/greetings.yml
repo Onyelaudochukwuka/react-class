@@ -24,12 +24,14 @@ jobs:
         with:
           github-token: ${{ secrets.GENERAL_TOKEN}}
           issue-message: |
-            ## It''s great having you contribute to this project by creating an issue
-             Thank you! Welcome to the community :smile:
+            ## Thanks for taking the time to contribute by creating an issue
+            #### It's great having you!.
+            This is an automated message, we'll give response soon.
           pr-message: |
-             ## It''s great having you contribute to this project by creating a pull request
-             Please hold On while your contributions are being reviewed
-             Thank you! Welcome to the community :smile:
+             ## Thanks for taking the time to contribute by creating a pull request.
+             Please hold On while your contributions are being reviewed.
+             This is an automated message, we'll give response soon.
+
 
 
         
