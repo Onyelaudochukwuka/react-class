@@ -1,25 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+import Card from "./Card";
+import Home from "./pages/Home";
+const data = [{
+  firstName: "john",
+  lastName: "doe",
+  Date: Date.now(),
+  userName: "MrJohn"
+  },
+  {
+  firstName: "james",
+  lastName: "doe",
+  Date: Date.now(),
+  userName: "MrJohn"
+  },
+  {
+  firstName: "martins",
+  lastName: "doe",
+  Date: Date.now(),
+  userName: "MrJohn"
+  },
+  {
+  firstName: "hshdj",
+  lastName: "doe",
+  Date: Date.now(),
+  userName: "MrJohn"
+  }
+];
 
-function App() {
+const App = () => {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <Routes>
+      <Route path="/home" exact element={<Home />} />
+      <Route path="/about" exact element={<Home />} />
+      <Route path="/home" exact element={<Home />} />
+      <Route path="/home/:Some" exact element={<Home />} />
 
+    </Routes>
+        );
+};
+  
 export default App;
