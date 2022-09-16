@@ -1,13 +1,4 @@
-on: 
-  issue_comment:
-    types: [created]
-  pull_request:
-    types: [opened, closed, edited, ready_for_review, review_requested, reopened]
-  issues:
-    types: [opened, edited, pinned, closed, reopened, assigned, labeled]
-  page_build:
-  watch:
-    types: [started]
+on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -16,10 +7,13 @@ jobs:
       - name: whatsapp-notify
         id: whatsapp-notify
         env:
-          account_sid: ${{ secrets.TWILIO_ACCOUNT_SID }}
-          auth_token: ${{ secrets.TWILIO_AUTH }}
-          to_whatsapp_no: ${{ secrets.TO }}
+          account_sid: ${{ secrets.account_sid }}
+          auth_token: ${{ secrets.auth_token }}
+          to_whatsapp_no: ${{ secrets.to_whatsapp_no }}
 
 
-        uses: khaled-ibtikar/whatsapp-push-notify-action@master
-    
+        uses: ishween/whatsapp-push-notify-action@master
+      
+      - name : Run
+        run: |
+          echo 'Start!'
