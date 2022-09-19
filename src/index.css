@@ -1,0 +1,31 @@
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+button{
+    border: 2px solid black;
+    background: #a4f7e2;
+    font-size: 2rem;
+    padding: 1rem;
+    cursor: pointer;
+    width: 100%;
+    display: block;
+}
+
+input{
+    width: 95%;
+    height: 100px;
+    border: 2px solid blueviolet;
+    background: rgb(224, 206, 242);
+    font-size: 30px;
+    text-align: right;
+    padding-right: 5%;
+}
+button:hover{
+    background-color: blueviolet;
+    transition-property: backgroud;
+    transition-duration: 500ms;
+    transition-timing-function: ease-in;
+}
